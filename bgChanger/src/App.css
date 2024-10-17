@@ -1,0 +1,33 @@
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+.base{
+    height: 100vh;
+}
+
+.colors{
+    padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.button{
+    text-align: center;
+    background-color: rgb(79, 83, 119);
+    color: white;
+    font-weight: 700;
+    padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+    border-radius: 50%;
+    border: none; /* Remove border */
+    display: inline-flex; /* Flexbox to center content */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    
+
+}
