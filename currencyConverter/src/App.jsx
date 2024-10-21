@@ -19,7 +19,7 @@ function App() {
     setAmt(convertedCurrency);
     setconvertedCurrency(amt);
   };
-
+  console.log(currencyInfo)
   const value = currencyInfo ? currencyInfo[to]["value"] : null;
 
   const convertFunc = () => {
