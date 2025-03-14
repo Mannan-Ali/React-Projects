@@ -1,9 +1,9 @@
-import React, { useCallback, useEffect } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Webcam from "react-webcam";
 
 //getting all the cameras availabe on the device
 const Allcamera = () => {
-  const [devices, setDevices] = React.useState([]);
+  const [devices, setDevices] = useState([]);
 
   const handleDevices = useCallback(
     (mediaDevice) => {
@@ -23,7 +23,7 @@ const Allcamera = () => {
             audio={false}
             videoConstraints={{ deviceId: device.deviceId }}
           />
-          ;<p>{device.label || `Device ${key + 1}`}</p>
+          <p>{device.label || `Device ${key + 1}`}</p>
         </div>
       ))}
     </>
