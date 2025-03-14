@@ -42,14 +42,13 @@ const router = createBrowserRouter(
       <Route path="about" element={<About/>} />
       <Route path="contact" element={<Contact/>} />
       <Route path="user/:userId" element={<User/>} />
-      <Route 
-      path="github/:userName" 
-      element={<GitHub/>} 
+      <Route path="github/:userName?" element={<GitHub/>} 
       //  2.] inside loader we can directly call anynomoys 
       //function loader{()=>{ fetch() ....}}
       //and do everything here but better is to do in 
       //in the new file or the file with the element
       loader = {githubInfoLoader}/>
+
     </Route>
   )
 )

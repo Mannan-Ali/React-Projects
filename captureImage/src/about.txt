@@ -1,0 +1,29 @@
+1. line 10 - 12
+
+    mediaDevices refers to an array of media device objects that represent available input and output devices on the user's system. These devices include:
+
+    Microphones ("audioinput")
+    Speakers / Headphones ("audiooutput")
+    Cameras / Webcams ("videoinput")
+    This array comes from the navigator.mediaDevices.enumerateDevices() API, which lists all connected media devices (such as webcams and microphones).
+
+    In the code:
+
+    js
+    Copy
+    Edit
+    setDevices(mediaDevices.filter(({ kind }) => kind === "videoinput"))
+    mediaDevices contains all available media devices.
+    .filter(({ kind }) => kind === "videoinput") extracts only the devices that are cameras/webcams (kind === "videoinput").
+    setDevices(...) updates the state with only the video input devices.
+
+
+2. line 8 to 16
+    NOTE : the mediadevices  in the handleDevices is the list of mediaDevies available which is passed from useEffect using enumerateDevices
+    When the web app loads, useEffect runs automatically.
+    It asks the browser for a list of all connected media devices (like cameras and microphones) using:
+
+    navigator.mediaDevices.enumerateDevices()
+    Once the browser provides the list, .then(handleDevices) runs, passing that list to handleDevices.
+    handleDevices filters out only cameras (kind === "videoinput") and updates the devices state.
+    Now, devices contains only webcams or cameras connected to the system.
